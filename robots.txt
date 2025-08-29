@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://maximemeyer.github.io/sitemap.xml
+Sitemap: https://meyermaxime.github.io/sitemap.xml
