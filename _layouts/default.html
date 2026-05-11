@@ -17,8 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- Set the title directly -->
-    <title>Maxime Meyer</title>
-        <meta name="description" content="Maxime Meyer, PhD Student at the Department of Mathematics, National University of Singapore. 
+<title>{{ page.title }} | Maxime Meyer</title>        <meta name="description" content="Maxime Meyer, PhD Student at the Department of Mathematics, National University of Singapore. 
           Exploring Approximation Theory, Online Learning, and Learning Theory.">
 
     <link rel="stylesheet" href="/assets/css/colors-light.css?v=">
@@ -141,16 +140,22 @@ Machine Learning Theory, Approximation Theory, Online Learning.
         <div class="sidebar-footer"><p><small></small></p>
 </div>
       </div>
-      <section>
-
-		  <nav class="topnav">
-  <a class="active" href="home.html">Home</a>
-  <a href="publications.html">Publications</a>
-  <a href="others.html">Others</a>
-</nav>
 
 
-      </section>
+<section>
+
+  <nav class="topnav">
+    <a href="{{ '/home.html' | relative_url }}">Home</a>
+    <a href="{{ '/publications.html' | relative_url }}">Publications</a>
+    <a href="{{ '/others.html' | relative_url }}">Others</a>
+  </nav>
+
+  {{ content }}
+
+</section>
+
+
+		
       <footer><p><small></small></p>
 </footer>
     </div>
