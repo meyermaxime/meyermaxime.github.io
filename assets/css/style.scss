@@ -68,29 +68,24 @@
 }
 
 .pub-list {
+  list-style: none;
   padding-left: 0;
-  list-style-position: outside;
-  counter-reset: pub-counter;
-}
-
-.pub-list > li {
-  margin-left: 1.6em;
+  margin-left: 0;
 }
 
 .pub-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 14px;
-  padding: 16px 18px;
-  margin: 14px 0;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  background: #fcfcfc;
+  border: 1.5px solid #d4d4d4;
+  border-radius: 16px;
+  padding: 18px 20px;
+  margin: 18px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 .pub-title {
   font-weight: 700;
-  font-size: 1.05rem;
-  color: #111;
-  margin-bottom: 4px;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
 }
 
 .pub-authors {
@@ -99,53 +94,42 @@
 }
 
 .pub-tldr {
-  color: #111;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  line-height: 1.5;
 }
 
 .pub-buttons {
   display: flex;
-  gap: 8px;
+  gap: 10px;
 }
 
 .pub-btn {
-  display: inline-block;
-  padding: 4px 12px;
-  border: 1px solid #ddd;
+  border: none;
   border-radius: 999px;
-  background: #fff;
+  padding: 6px 14px;
+  background: #ececec;
   color: #111;
-  font-weight: 700;
-  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
   text-decoration: none;
+  font-size: 0.9rem;
 }
 
 .pub-btn.dark {
-  background: #050505;
+  background: #000;
   color: #fff;
-  border-color: #050505;
 }
 
 .pub-btn:hover {
-  text-decoration: none;
   opacity: 0.85;
-}
-
-.pub-card {
-  border: 3px solid red !important;
-  background: yellow !important;
 }
 
 .pub-abstract {
   display: none;
-  margin-top: 14px;
-  padding: 14px 16px;
-  border: 1px solid #d9d9d9;
+  margin-top: 16px;
+  padding: 16px;
   border-radius: 12px;
-  background: #fafafa;
-  line-height: 1.5;
-}
-
-.pub-btn {
-  cursor: pointer;
+  background: #f5f5f5;
+  border: 1px solid #dddddd;
+  line-height: 1.6;
 }
