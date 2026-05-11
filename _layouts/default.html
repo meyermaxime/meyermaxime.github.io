@@ -185,8 +185,9 @@ Machine Learning Theory, Approximation Theory, Online Learning.
     </div>
 
     <div id="abs1" class="pub-abstract">
-      Add full abstract here.
-    </div>
+We study how we can leverage only a handful of characteristics of a transformer's architecture to closely predict the number of different sentences it can output, both qualitatively and quantitatively. Notably, we provide an upper bound depending on the length of the prompt, which we show empirically to be tight up to a factor less than 10, across architectures and model sizes.
+  Our analysis also provides a theoretical explanation for previously observed empirical failures of transformers on simple sequence tasks—such as copying and cramming.
+  Formally, we prove that (i) the maximal length of accessible sequences grows linearly with the prompt length, (ii) beyond a critical threshold, the proportion of accessible sequences decays exponentially with sequence length, and (iii) the linear coefficient relating prompt length to accessible sequence length admits a theoretical upper bound. Notably, these results hold even with unbounded context and computation time.    </div>
   </li>
 
 
@@ -203,7 +204,7 @@ Machine Learning Theory, Approximation Theory, Online Learning.
 
     <div class="pub-tldr">
       <strong>TL;DR:</strong>
-      We introduce a Learning-to-Defer approach in the online learning setting that allows deferral to a varying number of experts.
+      We study Learning-to-Defer in the online setting, which accounts for varying expert availability and accuracy.
     </div>
  
     <div class="pub-buttons">
