@@ -162,7 +162,7 @@ Machine Learning Theory, Approximation Theory, Online Learning.
 
   <li class="pub-card">
     <div class="pub-title">
-      The Expressive Limits of Transformers.
+      How Many Different Outputs Can a Transformer Generate?
     </div>
 
     <div class="pub-authors">
@@ -171,7 +171,7 @@ Machine Learning Theory, Approximation Theory, Online Learning.
 
     <div class="pub-tldr">
       <strong>TL;DR:</strong>
-      Add one-sentence summary here.
+      We formalize the notion of accessible sequences—those that a transformer can produce for some prompt—and quantify how accessibility depends on prompt length and model parameters, closely matching empirical values.
     </div>
 
     <div class="pub-buttons">
@@ -180,12 +180,12 @@ Machine Learning Theory, Approximation Theory, Online Learning.
       </button>
 
       <a class="pub-btn dark" href="#">
-        Link
+        ICML 2026 Spotlight
       </a>
     </div>
 
     <div id="abs1" class="pub-abstract">
-We study how we can leverage only a handful of characteristics of a transformer's architecture to closely predict the number of different sentences it can output, both qualitatively and quantitatively. Notably, we provide an upper bound depending on the length of the prompt, which we show empirically to be tight up to a factor less than 10, across architectures and model sizes.
+We study how we can leverage only a handful of characteristics of a transformer's architecture to closely predict the number of different sentences it can output, both qualitatively and quantitatively. We provide an upper bound depending on the length of the prompt, which we show empirically to be tight up to a factor less than 10, across architectures and model sizes.
   Our analysis also provides a theoretical explanation for previously observed empirical failures of transformers on simple sequence tasks—such as copying and cramming.
   Formally, we prove that (i) the maximal length of accessible sequences grows linearly with the prompt length, (ii) beyond a critical threshold, the proportion of accessible sequences decays exponentially with sequence length, and (iii) the linear coefficient relating prompt length to accessible sequence length admits a theoretical upper bound. Notably, these results hold even with unbounded context and computation time.    </div>
   </li>
@@ -212,10 +212,7 @@ We study how we can leverage only a handful of characteristics of a transformer'
 		Abstract
       </button>
 
-      <a class="pub-btn dark" href="#">
-        Link
-      </a>
-    </div>
+
 
     <div id="abs2" class="pub-abstract">
         Learning-to-Defer (L2D) methods route each query either to a predictive model or to external experts. While existing work studies this problem in batch settings, real-world deployments require handling streaming data, changing expert availability, and shifting expert distribution. We introduce the first online L2D algorithm for multiclass classification with bandit feedback and a dynamically varying pool of experts. Our method achieves regret guarantees of $O((n+n_e)T^{2/3})$ in general and $O((n+n_e)\sqrt T)$ under a low-noise condition, where $T$ is the time horizon, $n$ the number of labels, and $n_e$ the number of distinct experts observed across rounds. The analysis builds on novel $\mathcal H$-consistency bounds for the online framework, combined with first-order methods for online convex optimization. Experiments on synthetic and real-world datasets demonstrate that our approach effectively extends standard Learning-to-Defer to settings with varying expert availability and reliability.
@@ -246,7 +243,7 @@ We study how we can leverage only a handful of characteristics of a transformer'
 
       <a class="pub-btn dark"
          href="https://arxiv.org/abs/2509.00421">
-        Link
+        arXiv
       </a>
     </div>
 
