@@ -147,46 +147,147 @@ Machine Learning Theory, Approximation Theory, Online Learning.
 <h2>Publications</h2>
 
 <ol class="pub-list">
+
   <li class="pub-card">
-    <div class="pub-title">The Expressive Limits of Transformers.</div>
-    <div class="pub-authors"><u>Maxime Meyer</u>*, Mario Michelessa*, Caroline Chaux, Vincent Y. F. Tan.</div>
-    <div class="pub-tldr"><strong>TL;DR:</strong> Add one-sentence summary here.</div>
+    <div class="pub-title">
+      The Expressive Limits of Transformers.
+    </div>
+
+    <div class="pub-authors">
+      <u>Maxime Meyer</u>*, Mario Michelessa*, Caroline Chaux, Vincent Y. F. Tan.
+    </div>
+
+    <div class="pub-tldr">
+      <strong>TL;DR:</strong>
+      Add one-sentence summary here.
+    </div>
+
     <div class="pub-buttons">
-      <a class="pub-btn" href="#">Abstract</a>
-      <a class="pub-btn dark" href="#">Link</a>
+      <button class="pub-btn" onclick="toggleAbstract('abs1')">
+        Abstract
+      </button>
+
+      <a class="pub-btn dark" href="#">
+        Link
+      </a>
+    </div>
+
+    <div id="abs1" class="pub-abstract">
+      Add full abstract here.
     </div>
   </li>
 
+
+
   <li class="pub-card">
-    <div class="pub-title">Online Learning-to-Defer with Varying Experts.</div>
-    <div class="pub-authors"><u>Maxime Meyer</u>*, Hoang Duy Dang*, Yannis Montreuil*, Lai Xing Ng, Axel Carlier, Wei Tsang Ooi.</div>
-    <div class="pub-tldr"><strong>TL;DR:</strong> Add one-sentence summary here.</div>
+    <div class="pub-title">
+      Online Learning-to-Defer with Varying Experts.
+    </div>
+
+    <div class="pub-authors">
+      <u>Maxime Meyer</u>*, Hoang Duy Dang*, Yannis Montreuil*, Lai Xing Ng,
+      Axel Carlier, Wei Tsang Ooi.
+    </div>
+
+    <div class="pub-tldr">
+      <strong>TL;DR:</strong>
+      Add one-sentence summary here.
+    </div>
+
     <div class="pub-buttons">
-      <a class="pub-btn" href="#">Abstract</a>
-      <a class="pub-btn dark" href="#">Link</a>
+      <button class="pub-btn" onclick="toggleAbstract('abs2')">
+        Abstract
+      </button>
+
+      <a class="pub-btn dark" href="#">
+        Link
+      </a>
+    </div>
+
+    <div id="abs2" class="pub-abstract">
+      Add full abstract here.
     </div>
   </li>
 
+
+
   <li class="pub-card">
-    <div class="pub-title">Memory Limitations of Prompt Tuning in Transformers.</div>
-    <div class="pub-authors"><u>Maxime Meyer</u>, Mario Michelessa, Caroline Chaux, Vincent Y. F. Tan.</div>
-    <div class="pub-tldr"><strong>TL;DR:</strong> Add one-sentence summary here.</div>
+    <div class="pub-title">
+      Memory Limitations of Prompt Tuning in Transformers.
+    </div>
+
+    <div class="pub-authors">
+      <u>Maxime Meyer</u>, Mario Michelessa, Caroline Chaux,
+      Vincent Y. F. Tan.
+    </div>
+
+    <div class="pub-tldr">
+      <strong>TL;DR:</strong>
+      Add one-sentence summary here.
+    </div>
+
     <div class="pub-buttons">
-      <a class="pub-btn" href="#">Abstract</a>
-      <a class="pub-btn dark" href="https://arxiv.org/abs/2509.00421">Link</a>
+      <button class="pub-btn" onclick="toggleAbstract('abs3')">
+        Abstract
+      </button>
+
+      <a class="pub-btn dark"
+         href="https://arxiv.org/abs/2509.00421">
+        Link
+      </a>
+    </div>
+
+    <div id="abs3" class="pub-abstract">
+      Add full abstract here.
     </div>
   </li>
 
+
+
   <li class="pub-card">
-    <div class="pub-title">Online Learning of Pure States is as Hard as Mixed States.</div>
-    <div class="pub-authors"><u>Maxime Meyer</u>, Soumik Adhikary, Naixu Guo, Patrick Rebentrost.</div>
-    <div class="pub-tldr"><strong>TL;DR:</strong> Add one-sentence summary here.</div>
+    <div class="pub-title">
+      Online Learning of Pure States is as Hard as Mixed States.
+    </div>
+
+    <div class="pub-authors">
+      <u>Maxime Meyer</u>, Soumik Adhikary,
+      Naixu Guo, Patrick Rebentrost.
+    </div>
+
+    <div class="pub-tldr">
+      <strong>TL;DR:</strong>
+      Add one-sentence summary here.
+    </div>
+
     <div class="pub-buttons">
-      <a class="pub-btn" href="#">Abstract</a>
-      <a class="pub-btn dark" href="https://neurips.cc/virtual/2025/loc/san-diego/poster/115773">Link</a>
+      <button class="pub-btn" onclick="toggleAbstract('abs4')">
+        Abstract
+      </button>
+
+      <a class="pub-btn dark"
+         href="https://neurips.cc/virtual/2025/loc/san-diego/poster/115773">
+        Link
+      </a>
+    </div>
+
+    <div id="abs4" class="pub-abstract">
+      Add full abstract here.
     </div>
   </li>
+
 </ol>
+
+<script>
+function toggleAbstract(id) {
+  const el = document.getElementById(id);
+
+  if (el.style.display === "block") {
+    el.style.display = "none";
+  } else {
+    el.style.display = "block";
+  }
+}
+</script>
 
         
 <h2 id="talks">Talks</h2>
@@ -239,5 +340,18 @@ Machine Learning Theory, Approximation Theory, Online Learning.
 </footer>
     </div>
     <script src="/assets/js/scale.fix.js"></script>
+
+<script>
+function toggleAbstract(id) {
+  const el = document.getElementById(id);
+
+  if (el.style.display === "block") {
+    el.style.display = "none";
+  } else {
+    el.style.display = "block";
+  }
+}
+</script>
+	  
   </body>
 </html>
