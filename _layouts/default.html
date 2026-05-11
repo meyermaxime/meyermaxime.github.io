@@ -203,12 +203,12 @@ Machine Learning Theory, Approximation Theory, Online Learning.
 
     <div class="pub-tldr">
       <strong>TL;DR:</strong>
-      Add one-sentence summary here.
+      We introduce a Learning-to-Defer approach in the online learning setting that allows deferral to a varying number of experts.
     </div>
-
+ 
     <div class="pub-buttons">
       <button class="pub-btn" onclick="toggleAbstract('abs2')">
-        Abstract
+        Learning-to-Defer (L2D) methods route each query either to a predictive model or to external experts. While existing work studies this problem in batch settings, real-world deployments require handling streaming data, changing expert availability, and shifting expert distribution. We introduce the first online L2D algorithm for multiclass classification with bandit feedback and a dynamically varying pool of experts. Our method achieves regret guarantees of $O((n+n_e)T^{2/3})$ in general and $O((n+n_e)\sqrt T)$ under a low-noise condition, where $T$ is the time horizon, $n$ the number of labels, and $n_e$ the number of distinct experts observed across rounds. The analysis builds on novel $\mathcal H$-consistency bounds for the online framework, combined with first-order methods for online convex optimization. Experiments on synthetic and real-world datasets demonstrate that our approach effectively extends standard Learning-to-Defer to settings with varying expert availability and reliability.
       </button>
 
       <a class="pub-btn dark" href="#">
@@ -250,8 +250,7 @@ Machine Learning Theory, Approximation Theory, Online Learning.
     </div>
 
     <div id="abs3" class="pub-abstract">
-Despite the empirical success of prompt tuning for adapting pretrained language models to new tasks, its theoretical limitations remain poorly understood. Existing theoretical work largely focuses on universal approximation properties, showing that prompt tuning matches the expressivity of standard weight tuning for synthetic transformers. Although informative, these results typically rely on constructions that require unrealistically large transformers to approximate even very simple functions, suggesting that the resulting bounds are loose. This motivates a complementary perspective: in this paper, we study the memorization limits of prompt tuning for a fixed-size transformer. Our approach explains the empirical failures of transformers on simple memorization tasks such as lookup tables and information retrieval. In particular, we shed light on the sharp threshold behavior exhibited by transformers on such tasks: performance is perfect up to a critical context length and collapses abruptly beyond it.    </div>
-  </li>
+Despite the empirical success of prompt tuning in adapting pretrained language models to new tasks, theoretical analyses of its capabilities remain limited. Existing theoretical work primarily addresses universal approximation properties, demonstrating results comparable to standard weight tuning. In this paper, we explore a different aspect of the theory of transformers: the memorization capability of prompt tuning. We provide two principal theoretical contributions. First, we prove that the amount of information memorized by a transformer cannot scale faster than linearly with the prompt length. Second, and more importantly, we present the first formal proof of a phenomenon empirically observed in large language models: performance degradation in transformers with extended contexts. We rigorously demonstrate that transformers inherently have limited memory, constraining the amount of information they can retain, regardless of the context size. This finding offers a fundamental understanding of the intrinsic limitations of transformer architectures, particularly their ability to handle long sequences.   </li>
 
 
 
