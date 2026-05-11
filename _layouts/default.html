@@ -158,7 +158,7 @@ Machine Learning Theory, Approximation Theory, Online Learning.
 		  
 <h2>Publications</h2>
 
-<ol class="pub-list">
+ <ol class="pub-list">
 
   <li class="pub-card">
     <div class="pub-title">
@@ -169,32 +169,28 @@ Machine Learning Theory, Approximation Theory, Online Learning.
       <u>Maxime Meyer</u>*, Mario Michelessa*, Caroline Chaux, Vincent Y. F. Tan.
     </div>
 
+    <div class="pub-buttons">
+      <button class="pub-btn" onclick="toggleAbstract('tldr1')">
+        TL;DR
+      </button>
 
+      <button class="pub-btn" onclick="toggleAbstract('abs1')">
+        Abstract
+      </button>
 
-
-
-<button class="pub-btn" onclick="toggleAbstract('tldr1')">
-    TL;DR
-  </button>
-
-  <button class="pub-btn" onclick="toggleAbstract('abs1')">
-    Abstract
-  </button>
-
-  <a class="pub-btn dark" href="#">
+      <a class="pub-btn dark" href="#">
         ICML 2026 Spotlight
-  </a>
+      </a>
+    </div>
 
-</div>
-
-<div id="tldr1" class="pub-abstract">
+    <div id="tldr1" class="pub-abstract">
       We formalize the notion of accessible sequences—those that a transformer can produce for some prompt—and quantify how accessibility depends on prompt length and model parameters, closely matching empirical values.
-</div>
+    </div>
 
-<div id="abs1" class="pub-abstract">
-We study how we can leverage only a handful of characteristics of a transformer's architecture to closely predict the number of different sentences it can output, both qualitatively and quantitatively. We provide an upper bound depending on the length of the prompt, which we show empirically to be tight up to a factor less than 10, across architectures and model sizes.
-  Our analysis also provides a theoretical explanation for previously observed empirical failures of transformers on simple sequence tasks—such as copying and cramming.
-  Formally, we prove that (i) the maximal length of accessible sequences grows linearly with the prompt length, (ii) beyond a critical threshold, the proportion of accessible sequences decays exponentially with sequence length, and (iii) the linear coefficient relating prompt length to accessible sequence length admits a theoretical upper bound. Notably, these results hold even with unbounded context and computation time. </div>
+    <div id="abs1" class="pub-abstract">
+      We study how we can leverage only a handful of characteristics of a transformer's architecture to closely predict the number of different sentences it can output, both qualitatively and quantitatively. We provide an upper bound depending on the length of the prompt, which we show empirically to be tight up to a factor less than 10, across architectures and model sizes. Our analysis also provides a theoretical explanation for previously observed empirical failures of transformers on simple sequence tasks—such as copying and cramming. Formally, we prove that (i) the maximal length of accessible sequences grows linearly with the prompt length, (ii) beyond a critical threshold, the proportion of accessible sequences decays exponentially with sequence length, and (iii) the linear coefficient relating prompt length to accessible sequence length admits a theoretical upper bound. Notably, these results hold even with unbounded context and computation time.
+    </div>
+  </li>
 
 
 
