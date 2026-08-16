@@ -5,28 +5,6 @@ title: Talks
 
 <h2 id="talks">Talks</h2>
 <ul>
-	
-  <li>
-    <strong>ICML 2026</strong>,
-    <em>Your Talk Title</em>,
-    <u>Seoul</u>, Jul 2026.
-
-    <div class="talk-player">
-      <video id="icml-talk" controls preload="metadata">
-        <source src="/assets/talks/icml2026/talk.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-      </video>
-
-      <div class="slide-panel">
-        <img
-          id="icml-slide"
-          src="/assets/talks/icml2026/slides/slide-01.png"
-          alt="Current presentation slide"
-        >
-      </div>
-    </div>
-  </li>
-	
 	<li>
     <strong>Hanoi-Singapore Mathematical Seminar</strong>, <em>How Do Large Language Models Scale with Context Length?</em>, <u>Hanoi</u>, Apr 2026.
   </li>
@@ -43,71 +21,3 @@ title: Talks
     <strong>Centre for Quantum Technologies, NUS</strong>, <em>On the sequential fat-shattering dimension of Quantum States</em>, <u>Singapore</u>, Nov 2024.
   </li>
 </ul>
-
-<style>
-.talk-player {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
-  gap: 16px;
-  margin: 16px 0 24px;
-  align-items: center;
-}
-
-.talk-player video {
-  width: 100%;
-  background: #000;
-}
-
-.slide-panel {
-  width: 100%;
-  background: #111;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slide-panel img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-@media (max-width: 800px) {
-  .talk-player {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
-
-<script>
-const timings = [
-  { time: 0.0,  slide: "/assets/talks/icml2026/slides/slide-01.png" },
-  { time: 18.4, slide: "/assets/talks/icml2026/slides/slide-02.png" },
-  { time: 42.7, slide: "/assets/talks/icml2026/slides/slide-03.png" },
-  { time: 71.2, slide: "/assets/talks/icml2026/slides/slide-04.png" }
-];
-
-const video = document.getElementById("icml-talk");
-const slide = document.getElementById("icml-slide");
-
-function updateSlide() {
-  const t = video.currentTime;
-
-  let current = timings[0];
-
-  for (const item of timings) {
-    if (item.time <= t) {
-      current = item;
-    } else {
-      break;
-    }
-  }
-
-  if (slide.getAttribute("src") !== current.slide) {
-    slide.src = current.slide;
-  }
-}
-
-video.addEventListener("timeupdate", updateSlide);
-video.addEventListener("seeked", updateSlide);
-</script>
