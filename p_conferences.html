@@ -5,6 +5,27 @@ title: Talks
 
 <h2 id="talks">Talks</h2>
 <ul>
+    <strong>ICML 2026</strong>,
+    <em>YOUR ICML TALK TITLE</em>, Jul 2026.
+
+    <div class="icml-player">
+      <div class="icml-video">
+        <video id="icml-talk" controls preload="metadata">
+          <source
+            src="https://pub-3659b0a64f93408da23dec1dada69ebf.r2.dev/icml_oral.mp4"
+            type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+
+      <div class="icml-slides">
+        <img
+          id="icml-slide"
+          src="{{ '/assets/talks/icml2026/slide-01.png' | relative_url }}"
+          alt="ICML presentation slide">
+      </div>
+    </div>
+  </li>	
 	<li>
     <strong>Hanoi-Singapore Mathematical Seminar</strong>, <em>How Do Large Language Models Scale with Context Length?</em>, <u>Hanoi</u>, Apr 2026.
   </li>
@@ -21,3 +42,92 @@ title: Talks
     <strong>Centre for Quantum Technologies, NUS</strong>, <em>On the sequential fat-shattering dimension of Quantum States</em>, <u>Singapore</u>, Nov 2024.
   </li>
 </ul>
+
+<style>
+.icml-player {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 15px;
+  width: 100%;
+  margin: 15px 0 25px;
+  align-items: center;
+}
+
+.icml-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #000;
+}
+
+.icml-slides {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.icml-slides img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Stack video and slides on phones */
+@media (max-width: 700px) {
+  .icml-player {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.getElementById("icml-talk");
+  const slide = document.getElementById("icml-slide");
+
+  const base = "{{ '/assets/talks/icml2026/' | relative_url }}";
+
+  const timings = [
+    { time: 0.00,   file: "slide-01.png" },
+    { time: 20.48,  file: "slide-02.png" },
+    { time: 60.88,  file: "slide-03.png" },
+    { time: 123.36, file: "slide-04.png" },
+    { time: 203.68, file: "slide-05.png" },
+    { time: 231.96, file: "slide-06.png" },
+    { time: 257.24, file: "slide-07.png" },
+    { time: 346.44, file: "slide-08.png" },
+    { time: 377.84, file: "slide-09.png" },
+    { time: 431.52, file: "slide-10.png" },
+    { time: 462.12, file: "slide-11.png" },
+    { time: 553.00, file: "slide-12.png" },
+    { time: 669.68, file: "slide-13.png" },
+    { time: 721.32, file: "slide-14.png" }
+  ];
+
+  let currentSlide = -1;
+
+  function updateSlide() {
+    const t = video.currentTime;
+    let index = 0;
+
+    for (let i = 0; i < timings.length; i++) {
+      if (timings[i].time <= t) {
+        index = i;
+      } else {
+        break;
+      }
+    }
+
+    if (index !== currentSlide) {
+      currentSlide = index;
+      slide.src = base + timings[index].file;
+    }
+  }
+
+  video.addEventListener("timeupdate", updateSlide);
+  video.addEventListener("seeked", updateSlide);
+  video.addEventListener("loadedmetadata", updateSlide);
+});
+</script>
+
