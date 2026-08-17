@@ -44,19 +44,31 @@ title: Talks
 </ul>
 
 <style>
+/* Make the presentation wider than the normal text column */
 .icml-player {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 15px;
-  width: 100%;
-  margin: 15px 0 25px;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  width: min(1400px, 95vw);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  margin: 25px 0 35px;
   align-items: center;
+}
+
+.icml-video,
+.icml-slides {
+  width: 100%;
 }
 
 .icml-video video {
   display: block;
   width: 100%;
-  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
   background: #000;
 }
 
@@ -64,19 +76,20 @@ title: Talks
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
 }
 
 .icml-slides img {
   display: block;
   width: 100%;
-  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
 }
 
-/* Stack video and slides on phones */
-@media (max-width: 700px) {
+/* On smaller screens, put one above the other */
+@media (max-width: 800px) {
   .icml-player {
     grid-template-columns: 1fr;
+    width: 95vw;
   }
 }
 </style>
