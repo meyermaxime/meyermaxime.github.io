@@ -7,6 +7,42 @@ title: Publications
 
  <ol class="pub-list">
 
+ 	   <li class="pub-card">
+    <div class="pub-title">
+		Robustifying Asynchronous SGD via Soft Throttling.
+	</div>
+
+    <div class="pub-authors">
+      Kaoru Otsuka*, <u>Maxime Meyer</u>*, Yuki Takezawa, Makoto Yamada, Anastasia Koloskov.
+    </div>
+
+    <div class="pub-buttons">
+      <button class="pub-btn" onclick="toggleAbstract('tldr2')">
+        TL;DR
+      </button>
+
+      <button class="pub-btn" onclick="toggleAbstract('abs2')">
+        Abstract
+      </button>
+
+	<a class="pub-btn pub-link" href="https://arxiv.org/abs/2609.39357">
+        arXiv
+      </a>
+    </div>
+
+    <div id="tldr2" class="pub-abstract">
+      Throttle bridges asynchronous and synchronous Byzantine-robust SGD by limiting each client’s influence, protecting against malicious updates while improving empirical convergence even when all clients are honest.
+    </div>
+
+    <div id="abs2" class="pub-abstract">
+Asynchronous SGD is a popular algorithm for distributed learning where each client's gradient update is applied on arrival.
+This leads to a speed-up, but also an increased vulnerability to attacks, as fast clients can dominate the total update.
+We introduce {\myalgo}, a Byzantine-robust generalization of asynchronous SGD where the key idea is to exponentially down-weight updates from faster clients by a factor $q$.
+Both asynchronous SGD ($q=1$) and synchronous Byzantine-robust SGD ($q\to\infty$) correspond to specific settings of {\myalgo}.
+We provide a theoretical analysis of the convergence rate and validate the robustness to attacks both theoretically and empirically.
+Remarkably, our experiments show that this down-weighting mechanism can also improve performance over standard asynchronous SGD even in the non-Byzantine setting.    </div>
+  </li>
+
   <li class="pub-card">
     <div class="pub-title">
       How Many Different Outputs Can a Transformer Generate?
